@@ -6,7 +6,7 @@ function submitSearch(e) {
         alert("Please, fill the form");
     } else {
         searchImage(text);
-    }
+    };
 
     function searchImage(text) {
         var xhr = new XMLHttpRequest();
