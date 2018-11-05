@@ -2,8 +2,11 @@ document.getElementById("engine").addEventListener("submit", submitSearch);
 
 function submitSearch(e) {
     var text = document.getElementById("text").value;
-    searchImage(text);
-
+    if (text.length === 0) {
+        alert("Please, fill the form");
+    } else {
+        searchImage(text);
+    }
 
     function searchImage(text) {
         var xhr = new XMLHttpRequest();
@@ -32,4 +35,4 @@ function submitSearch(e) {
 
     }
     e.preventDefault();
-}
+};
