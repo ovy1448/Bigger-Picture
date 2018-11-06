@@ -8,6 +8,7 @@ function submitSearch(e) {
     } else {
         searchImage(text);
         document.getElementById("nextPage").style.display = "block";
+        document.getElementById("nextRandom").style.display = "none";
     };
     e.preventDefault();
 }
@@ -34,6 +35,7 @@ function searchImage(text) {
     }
 
     xhr.send();
+    console.log(a);
 }
 
 var a = 1;

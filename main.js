@@ -1,6 +1,8 @@
+document.getElementById("nextRandom").addEventListener("click", nextRandom);
+
 function loadImages() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.unsplash.com/photos/random?count=10&client_id=15020f1f31839a088aff745486e7a469cd064761ff165c9d3d9f57de77d10348", true);
+    xhr.open("GET", "https://api.unsplash.com/photos/random?count=10&page=" + s + "&client_id=15020f1f31839a088aff745486e7a469cd064761ff165c9d3d9f57de77d10348", true);
 
     xhr.onload = function () {
         if (this.status == 200) {
@@ -20,5 +22,11 @@ function loadImages() {
 
     }
     xhr.send();
+    console.log(s);
 };
 
+var s = 1;
+function nextRandom() {
+    s += 1;
+    return loadImages();
+};
