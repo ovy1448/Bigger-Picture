@@ -7,6 +7,7 @@ function submitSearch(e) {
         alert("Please, fill the form");
     } else {
         searchImage(text);
+        document.getElementById("nextPage").style.display = "block";
     };
     e.preventDefault();
 }
