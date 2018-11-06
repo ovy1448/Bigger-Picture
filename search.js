@@ -39,7 +39,7 @@ function searchImage(text) {
 }
 
 var a = 1;
-function nextPage() {
+function nextPage(e) {
     a += 1;
-    return submitSearch();
+    return submitSearch(e);
 };
