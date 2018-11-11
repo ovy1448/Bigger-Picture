@@ -7,20 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Image Search Engine</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 
 </head>
+<header id="head">
+    <form action="" id="engine" >
+        <input id="text" type="text" placeholder="Search..."><button id="submit" type="submit"><i class="fa fa-search"></i></button>
+        
+    </form>
+</header>
 
 <body onload="loadImages()">
-    <form action="" id="engine">
-        <input id="text" type="text" placeholder="Search...">
-        <button type="submit">Submit</button>
-    </form>
     <div id="images">
 
     </div>
-    <button id="nextRandom" style="display: block">Next Page</button>
-    <button id="nextPage" style="display: none">Next Page</button>
 </body>
+
+<footer id="foot">
+    <button class="nextButton" id="nextRandom" style="display: inline-block">Next Page...</button>
+    <button class="nextButton" id="nextPage" style="display: none">Next Page...</button>
+    
+</footer>
+
 <script src="main.js"></script>
 <script src="search.js"></script>
 
