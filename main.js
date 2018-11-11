@@ -10,9 +10,14 @@ function loadImages() {
 
             var output = "";
             for (var i in images) {
+                if (images[i].description != null) {
+                    description = '<div id="inner">' + images[i].description + '</div>';
+                } else {
+                    description = "";
+                }
                 output += '<div class="container">' +
                     '<img src="' + images[i].urls.small + '">' +
-                    '<div id="inner">' + images[i].description + '</div>' +
+                    description +
                     '</div>'
             }
 
