@@ -123,6 +123,7 @@ input:focus {
 }
 
 #inner {
+  display: none;
   position: absolute;
   bottom: 5px;
   padding-bottom: 20px;
@@ -132,11 +133,16 @@ input:focus {
   background-color: gray;
   width: 100%;
   opacity: 0.9;
-  
+  pointer-events:none;
 }
 
 #inner::first-letter {
   text-transform: capitalize;
 }
+
+img:hover + #inner {
+  display: block;
+}
+
 
 
