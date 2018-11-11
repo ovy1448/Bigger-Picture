@@ -10,8 +10,10 @@ function loadImages() {
 
             var output = "";
             for (var i in images) {
-                output +=
-                    '<img src="' + images[i].urls.small + '">'
+                output += '<div class="container">' +
+                    '<img src="' + images[i].urls.small + '">' +
+                    '<div id="inner">' + images[i].description + '</div>' +
+                    '</div>'
             }
 
             document.getElementById("images").innerHTML = output;
