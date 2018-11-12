@@ -94,7 +94,7 @@ input:focus {
 }
 
 #submit {
-  width: 30px;
+  width: 34px;
   height: 34px;
   color: white;
   background-color: gray;
@@ -103,6 +103,10 @@ input:focus {
   border-style: solid;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+#submit:focus {
+  outline-color: gray;
 }
 
 .nextButton {
@@ -144,5 +148,19 @@ img:hover + #inner {
   display: block;
 }
 
+#home {
+  width: 32px;
+  height: 32px;
+  color: white;
+  background-color: gray;
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+#home:focus {
+  outline-color: gray;
+}
 
 

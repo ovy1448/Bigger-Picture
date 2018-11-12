@@ -1,6 +1,10 @@
 document.getElementById("nextRandom").addEventListener("click", nextRandom);
+document.getElementById("home").addEventListener("click", loadImages);
+
 
 function loadImages() {
+    document.getElementById("nextPage").style.display = "none";
+    document.getElementById("nextRandom").style.display = "inline-block";
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://api.unsplash.com/photos/random?count=18&page=" + s + "&client_id=15020f1f31839a088aff745486e7a469cd064761ff165c9d3d9f57de77d10348", true);
 
@@ -20,11 +24,10 @@ function loadImages() {
                     description +
                     '</div>'
             }
-
             document.getElementById("images").innerHTML = output;
             console.log(images);
+            document.getElementById("engine").reset();
         }
-
     }
     xhr.send();
 };
