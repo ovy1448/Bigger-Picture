@@ -12,24 +12,26 @@
 
 
 </head>
-<header id="head">
-    <form action="" id="engine">
-        <button id="home" type="button"><i class="fas fa-home fa-lg"></i></button>
-        <input id="text" type="text" placeholder="Search..."><button id="submit" type="submit"><i class="fa fa-search"></i></button>
-    </form>
-</header>
+
 
 <body onload="loadImages()">
+    <header id="head">
+        <form action="" id="engine">
+            <button id="home" type="button"><i class="fas fa-home fa-lg"></i></button>
+            <input id="text" type="text" placeholder="Search..."><button id="submit" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </header>
     <div id="images">
 
     </div>
+    <footer id="foot">
+        <button class="nextButton" id="nextRandom" style="display: inline-block">Next Page...</button>
+        <div id="descri"></div>
+        <button class="nextButton" id="nextPage" style="display: none">Next Page...</button>
+    </footer>
 </body>
 
-<footer id="foot">
-    <button class="nextButton" id="nextRandom" style="display: inline-block">Next Page...</button>
-    <div id="descri"></div>
-    <button class="nextButton" id="nextPage" style="display: none">Next Page...</button>
-</footer>
+
 
 <script src="main.js"></script>
 <script src="search.js"></script>
