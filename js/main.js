@@ -60,5 +60,5 @@ function nextRandom() {
 // Function that will be called on the click of the home button.
 function home() {
     // Reload the current document.
-    location.reload();
+    loadImages();
 };
