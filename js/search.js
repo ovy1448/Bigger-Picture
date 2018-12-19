@@ -60,7 +60,7 @@ function searchImage(text) {
 };
 
 // Create new default variable for a next page.
-var a = 0;
+var a = 1;
 // Function that will be called on the click of the next page button.
 function nextPage(e) {
     // Increment the number everytime the next page button is clicked. Number is passed as a number of the page as part of the url.
