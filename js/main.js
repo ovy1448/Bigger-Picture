@@ -1,7 +1,6 @@
 // Access an HTML elements to attach an event handlers and set up a functions that will be called whenever the click event is triggered.
 document.getElementById("nextRandom").addEventListener("click", nextRandom);
 document.getElementById("home").addEventListener("click", home);
-console.error("ERROR: Random function doesn't work, idk why. API must have changed. No mention in changelog whatsoever. Quick overview... Random filter works diffretently. It does retrieve a buch of random photos, but the number should have been 18. For some reason the API sends only 10 (default is 1, so that's weird), when home btn clicked, response should be completely different result, but it return the same photos just in different order, next random page btn doesn't work aswell. So I've changed the link for default photos, not random. With next page working the same way. Sadly. Here: https://github.com/ovy1448/Bigger-Picture you can see in a gif, that it worked properly some two weeks ago.")
 
 // Main function that will be called onload.
 function loadImages() {
@@ -11,7 +10,7 @@ function loadImages() {
     // Variable with XMLHttpRequest constructor creates a new XMLHttpRequest object.
     var xhr = new XMLHttpRequest();
     // Initializes a newly-created request with given method, custom url (page number) and async.
-    xhr.open("GET", "https://api.unsplash.com/photos?per_page=18&page=" + s + "&client_id=15020f1f31839a088aff745486e7a469cd064761ff165c9d3d9f57de77d10348", true);
+    xhr.open("GET", "https://api.unsplash.com/photos/random?count=18&page=" + s + "&client_id=15020f1f31839a088aff745486e7a469cd064761ff165c9d3d9f57de77d10348", true);
 
     // Function is to be executed when the request completes successfully.
     xhr.onload = function () {
@@ -47,7 +46,7 @@ function loadImages() {
 };
 
 // Create new default variable for a next page.
-var s = 1;
+var s = 0;
 // Function that will be called on the click of the next page button.
 function nextRandom() {
     // Increment the number everytime the next page button is clicked. Number is passed as a number of the page as part of the url.
@@ -61,5 +60,5 @@ function nextRandom() {
 // Function that will be called on the click of the home button.
 function home() {
     // Reload the current document.
-    location.reload(true);
+    loadImages()
 };
