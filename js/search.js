@@ -44,7 +44,9 @@ function searchImage(text) {
                 // If the property of an object has a description, save the properties of the description in variable as a HTML element.
                 if (images[i].description != null) {
                     description = '<div id="inner">' + images[i].description + '</div>';
-                };
+                } else {
+                    description = ""; ;
+                }
                 // Save the url with the description as HTML element in a variable. 
                 output += '<div class="container">' +
                     '<img src="' + images[i].urls.small + '">' +
