@@ -126,6 +126,10 @@ input:focus {
   display: inline-block;
 }
 
+.container img {
+  cursor: pointer;
+}
+
 #inner {
   display: none;
   position: absolute;

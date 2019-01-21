@@ -42,14 +42,14 @@ function searchImage(text) {
             // Loops through the properties of an objects.
             for (var i in images) {
                 // If the property of an object has a description, save the properties of the description in variable as a HTML element.
-                if (images[i].description != null) {
-                    description = '<div id="inner">' + images[i].description + '</div>';
+                if (images[i].user.name != null) {
+                    description = '<div id="inner">' + images[i].user.name + '</div>';
                 } else {
                     description = ""; ;
                 }
                 // Save the url with the description as HTML element in a variable. 
                 output += '<div class="container">' +
-                    '<img src="' + images[i].urls.small + '">' +
+                    '<a target="_blank" href="'+images[i].user.links.html+'"><img src="' + images[i].urls.small + '">' +
                     description +
                     '</div>'
             };
