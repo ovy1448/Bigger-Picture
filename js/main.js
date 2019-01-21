@@ -10,7 +10,7 @@ function loadImages() {
     // Variable with XMLHttpRequest constructor creates a new XMLHttpRequest object.
     var xhr = new XMLHttpRequest();
     // Initializes a newly-created request with given method, custom url (page number) and async.
-    xhr.open("GET", "https://api.unsplash.com/photos/random?count=18&page=" + s + "&client_id=15020f1f31839a088aff745486e7a469cd064761ff165c9d3d9f57de77d10348", true);
+    xhr.open("GET", "https://api.unsplash.com/photos/random?count=30&page=" + s + "&client_id=15020f1f31839a088aff745486e7a469cd064761ff165c9d3d9f57de77d10348", true);
 
     // Function is to be executed when the request completes successfully.
     xhr.onload = function () {
